@@ -1,18 +1,16 @@
-import Button from '../../lib/Button'
-import PopoverDemo from '../../lib/Popover'
-import { Section } from '../../lib/Primitives'
-
+import Button from "../../lib/Button";
+import PopoverDemo from "../../lib/Popover";
+import { Column, Row } from "../../lib/Primitives";
 
 export default function Home() {
   return (
-    <Section>
-      Hello World!
-
-      <Button>
-        Click Me!
-      </Button>
-
-      <PopoverDemo />
-    </Section>
-  )
+    <Column>
+      <Row>
+        Hello World!
+        <Button size="small">Click Me!</Button>
+        <PopoverDemo />
+        <Button size="large">Large!</Button>
+      </Row>
+    </Column>
+  );
 }
