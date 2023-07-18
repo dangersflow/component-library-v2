@@ -1,14 +1,14 @@
 "use client";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import { useReducer } from "react";
 import ComponentThemeContext from "../../context/ComponentThemeContext";
 import ComponentThemeContextReducer from "../../reducers/ComponentThemeContextReducer";
 import initialState from "../../utils/InitialState";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ weight: "300", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Modern Component Library",
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <ComponentThemeContext.Provider value={{ state, dispatch }}>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={rubik.className}>{children}</body>
       </html>
     </ComponentThemeContext.Provider>
   );

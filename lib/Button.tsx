@@ -8,6 +8,7 @@ import ComponentThemeContext from "../context/ComponentThemeContext";
 interface ButtonProps extends MotionProps {
   children: React.ReactNode;
   size: "small" | "medium" | "large";
+  className?: string;
 }
 
 const StyledButton = styled(motion.button)<ButtonProps>`
@@ -16,9 +17,9 @@ const StyledButton = styled(motion.button)<ButtonProps>`
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   border: none;
-  color: ${({ theme }) => theme.secondaryHex};
+  color: ${({ theme }) => theme.tertiaryHex};
   background-color: ${({ theme }) => theme.primaryHex};
   height: ${({ size }) => {
     switch (size) {

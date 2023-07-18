@@ -4,15 +4,25 @@ import * as Popover from "@radix-ui/react-popover";
 import styled from "styled-components";
 import Button from "./Button";
 
-const PopoverDemo = () => {
+interface PopoverProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+const StyledPopoverContent = styled(Popover.Content)``;
+
+const PopoverDemo = (props: PopoverProps) => {
   return (
-    <Popover.Root>
+    <Popover.Root {...props}>
       <Popover.Trigger asChild>
-        <Button size="medium">Trigger</Button>
+        <Button size="medium" className={props.className}>
+          Trigger
+        </Button>
       </Popover.Trigger>
-      <Popover.Anchor />
       <Popover.Portal>
-        <PopoverContent>I AM THE CONTENT</PopoverContent>
+        <PopoverContent className={props.className}>
+          I am the content for the popover component!
+        </PopoverContent>
       </Popover.Portal>
     </Popover.Root>
   );

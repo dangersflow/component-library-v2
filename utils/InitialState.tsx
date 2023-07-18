@@ -1,8 +1,8 @@
 const initialState = {
-    theme: 'light',
-    primaryHex: '#121420',
-    secondaryHex: '#403f4c',
-    tertiaryHex: '#000000',
+  theme: "light",
+  primaryHex: "#031926",
+  secondaryHex: "#58a4b0",
+  tertiaryHex: "#9dbebb",
 };
 
 export default initialState;
